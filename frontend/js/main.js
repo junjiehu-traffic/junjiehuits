@@ -36,6 +36,9 @@ positionProfile();
 
 // Both editions use identical paper IDs, topic IDs and filter semantics.
 const papers = [...document.querySelectorAll('.paper')];
+const publicationGroups = [...document.querySelectorAll('.publication-group')].map(element => ({
+  element, papers: [...element.querySelectorAll('.paper')], count: element.querySelector('.publication-group-count')
+}));
 const search = document.querySelector('#publication-search');
 const year = document.querySelector('#year-filter');
 const topicButtons = [...document.querySelectorAll('[data-filter]')];
@@ -52,6 +55,12 @@ function applyFilters() {
       (year.value === 'all' || paper.dataset.year === year.value) && terms.every(term => text.includes(term));
     paper.hidden = !matches;
     if (matches) visible++;
+  });
+  publicationGroups.forEach(group => {
+    const matches = group.papers.filter(paper => !paper.hidden).length;
+    group.element.hidden = matches === 0;
+    const count = matches === group.papers.length ? String(matches) : `${matches} / ${group.papers.length}`;
+    group.count.textContent = zh ? `${count} 篇论文` : `${count} ${group.papers.length === 1 ? 'publication' : 'publications'}`;
   });
   resultCount.textContent = zh ? `显示 ${visible} / ${papers.length} 篇论文` : `Showing ${visible} of ${papers.length} publications`;
   document.querySelector('#empty-results').hidden = visible !== 0;
@@ -113,7 +122,7 @@ function showPaper(paper, trigger) {
   body.replaceChildren();
   const title = document.createElement('h2');
   title.id = 'dialog-paper-title';
-  title.textContent = paper.querySelector('h3').textContent;
+  title.textContent = paper.querySelector('.paper-title').textContent;
   body.append(paper.querySelector('.paper-venue').cloneNode(true), title, paper.querySelector('.paper-authors').cloneNode(true));
   for (const selector of ['.paper-bibliographic', '.paper-status']) {
     const element = paper.querySelector(selector);

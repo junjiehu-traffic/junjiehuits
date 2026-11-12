@@ -25,6 +25,7 @@ UI = {
         'close': 'Close', 'top': 'Back to top', 'view': 'Explore papers', 'all': 'All research', 'year': 'Year', 'all_years': 'All years',
         'search': 'Search publications', 'placeholder': 'Search title, author, journal or keyword…', 'reset': 'Reset filters',
         'result': 'Showing all {count} publications', 'empty': 'No publications match your filters.',
+        'order_note': 'Grouped by research area, with publications listed newest first within each group.',
         'note': '* Corresponding author. Years follow the assigned journal issue; online-first status is shown separately. Abstract-based schematics are labeled.',
         'preview': 'Research overview', 'contribution': 'Research summary', 'figure': 'Research figure', 'original': 'Open full-size figure',
         'paper': 'Paper', 'cite': 'Copy citation', 'copied': 'Citation copied', 'copy_failed': 'Select and copy the citation below.',
@@ -54,6 +55,7 @@ UI = {
         'close': '关闭', 'top': '返回顶部', 'view': '查看相关论文', 'all': '全部方向', 'year': '年份', 'all_years': '全部年份',
         'search': '检索学术论文', 'placeholder': '搜索论文标题、作者、期刊或关键词…', 'reset': '重置筛选',
         'result': '显示全部 {count} 篇论文', 'empty': '没有符合当前筛选条件的论文。',
+        'order_note': '按研究方向分组展示，每组内按发表年份倒序排列。',
         'note': '* 通讯作者。年份按正式卷期列示，在线预发表另行注明；依据摘要绘制的图示均有标注。',
         'preview': '研究概览', 'contribution': '研究概述', 'figure': '研究图示', 'original': '查看完整图示',
         'paper': '论文链接', 'cite': '复制引用', 'copied': '引用已复制', 'copy_failed': '请选中并复制下方引用。',
@@ -118,7 +120,7 @@ def paper(p, u, topics):
     return f'''<article class="paper" id="paper-{p['id']}" data-topic="{p['topic']}" data-year="{p['year']}" data-citation="{escape(citation)}">
       {thumbnail}<div class="paper-content">
         <div class="paper-venue"><span>{escape(p['journal'])}</span><time>{p['year']}</time></div>
-        <h3><a href="{escape(p['url'])}" target="_blank" rel="noopener">{escape(p['title'])}</a></h3>
+        <h4 class="paper-title"><a href="{escape(p['url'])}" target="_blank" rel="noopener">{escape(p['title'])}</a></h4>
         <p class="paper-authors">{authors}</p>
         {bibliographic}{status}
         <p class="paper-topic">{escape(topics[p['topic']])}</p>
@@ -139,7 +141,16 @@ def build(lang):
     for i, topic in enumerate(u['topics_short']):
         topic_count = sum(p['topic'] == i for p in d['publications'])
         filters += f'<button type="button" data-filter="{i}" aria-pressed="false">{topic}<span>{topic_count}</span></button>'
-    pubs = ''.join(paper(p, u, d['topics']) for p in sorted(d['publications'], key=lambda p:p['sort_date'], reverse=True))
+    groups = []
+    for i, title in enumerate(d['topics']):
+        entries = sorted((p for p in d['publications'] if p['topic'] == i), key=lambda p:(p['year'], p['sort_date']), reverse=True)
+        group_count = f'{len(entries)} publications' if lang == 'en' else f'{len(entries)} 篇论文'
+        group_papers = ''.join(paper(p, u, d['topics']) for p in entries)
+        groups.append(f'''<section class="publication-group" id="publication-group-{i}" data-group="{i}" aria-labelledby="publication-group-title-{i}">
+          <div class="publication-group-heading"><h3 id="publication-group-title-{i}"><span class="publication-group-index" aria-hidden="true">{i+1:02}</span>{escape(title)}</h3><span class="publication-group-count">{group_count}</span></div>
+          <div class="publication-group-papers">{group_papers}</div>
+        </section>''')
+    pubs = ''.join(groups)
     honors = d['honors_html'].replace('<h3>Scholarships</h3>', '<h3>Scholarships &amp; distinctions</h3>').replace('<h3>奖学金</h3>', '<h3>奖学金与综合荣誉</h3>')
     person = {'@context':'https://schema.org','@type':'Person','name':'Junjie Hu','alternateName':'胡俊杰','url':BASE,'image':BASE+'profile-anime.png','jobTitle':'Ph.D. Student','affiliation':{'@type':'CollegeOrUniversity','name':'Tsinghua University'},'sameAs':['https://scholar.google.com/citations?user=2Irk2E4AAAAJ','https://github.com/junjiehu-traffic']}
     page = f'''<!DOCTYPE html>
@@ -183,7 +194,7 @@ def build(lang):
     <section id="publications" aria-labelledby="heading-publications">{heading('publications','03',u,f'<span class="section-count">{count}</span>')}
       <div class="publication-tools enhanced"><div class="search-row"><label class="search-field">{icon('search')}<span class="sr-only">{u['search']}</span><input id="publication-search" type="search" placeholder="{u['placeholder']}" autocomplete="off"></label><label class="year-field"><span class="sr-only">{u['year']}</span><select id="year-filter" aria-label="{u['year']}"><option value="all">{u['all_years']}</option>{years}</select></label></div>
       <div class="topic-filters" role="group" aria-label="{u['research']}">{filters}</div><div class="results-row"><p id="result-count" role="status" aria-live="polite">{u['result'].format(count=count)}</p><button id="reset-filters" type="button" hidden>{u['reset']}</button></div></div>
-      <p class="publication-note">{u['note']}</p><div class="publications-list">{pubs}</div><p id="empty-results" hidden>{u['empty']}</p>
+      <p class="publication-note">{u['order_note']}<br>{u['note']}</p><div class="publications-list">{pubs}</div><p id="empty-results" hidden>{u['empty']}</p>
     </section>
     <section id="experience" aria-labelledby="heading-experience">{heading('experience','04',u)}<div class="experience-list">{d['experience_html']}</div></section>
     <section id="honors" aria-labelledby="heading-honors">{heading('honors','05',u)}
