@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="600" viewBox="0 0 1080 600" role="img" aria-labelledby="title desc"><title id="title">Public EV charging</title><desc id="desc">Based on the published abstract; not an original article figure.</desc>
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="7" refY="3" orient="auto"><path d="M0,0 L7,3 L0,6" fill="none" stroke="#858aad" stroke-width="1.5"/></marker></defs>
+<rect width="1080" height="600" rx="22" fill="#f8f9fc"/><path d="M48 140H1032" stroke="#d9ddec"/>
+<g font-family="Segoe UI,Microsoft YaHei,Arial,sans-serif">
+<text x="50" y="49" font-size="15" letter-spacing="2" fill="#676d94">RESEARCH SCHEMATIC</text>
+<text x="48" y="106" font-size="36" font-weight="600" fill="#282e48">Public EV charging</text>
+<rect x="48" y="184" width="296" height="266" rx="16" fill="white" stroke="#d9ddec" stroke-width="2"/>
+<rect x="70" y="208" width="46" height="40" rx="10" fill="#eef0f9"/><text x="93" y="236" text-anchor="middle" fill="#62699c" font-size="22" font-weight="600">01</text>
+<text x="70" y="298" font-size="23" font-weight="600" fill="#30374f">Charging records</text>
+<text x="70" y="350" font-size="19" fill="#676e84">Users · sites · sessions</text>
+<text x="70" y="386" font-size="19" fill="#676e84">Price · temperature</text>
+<path d="M352 318H382" fill="none" stroke="#858aad" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="392" y="184" width="296" height="266" rx="16" fill="white" stroke="#d9ddec" stroke-width="2"/>
+<rect x="414" y="208" width="46" height="40" rx="10" fill="#eef0f9"/><text x="437" y="236" text-anchor="middle" fill="#62699c" font-size="22" font-weight="600">02</text>
+<text x="414" y="298" font-size="23" font-weight="600" fill="#30374f">Behavior &amp; prediction</text>
+<text x="414" y="350" font-size="19" fill="#676e84">Exposure-specific analysis</text>
+<text x="414" y="386" font-size="19" fill="#676e84">Separate predictive models</text>
+<path d="M696 318H726" fill="none" stroke="#858aad" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="736" y="184" width="296" height="266" rx="16" fill="white" stroke="#d9ddec" stroke-width="2"/>
+<rect x="758" y="208" width="46" height="40" rx="10" fill="#eef0f9"/><text x="781" y="236" text-anchor="middle" fill="#62699c" font-size="22" font-weight="600">03</text>
+<text x="758" y="298" font-size="23" font-weight="600" fill="#30374f">Historical replay</text>
+<text x="758" y="350" font-size="19" fill="#676e84">Peak relief · recovery delay</text>
+<text x="758" y="386" font-size="19" fill="#676e84">Destination loading</text>
+<text x="48" y="508" font-size="18" fill="#626a83">Based on the published abstract; not an original article figure.</text>
+<text x="48" y="553" font-size="17" fill="#858ba0">doi:10.1016/j.apenergy.2026.129177</text>
+</g></svg>

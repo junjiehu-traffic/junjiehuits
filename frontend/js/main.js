@@ -62,8 +62,8 @@ document.querySelectorAll('[data-research]').forEach(link => link.addEventListen
   topic = link.dataset.research; year.value = 'all'; search.value = ''; applyFilters();
 }));
 const params = new URLSearchParams(location.search);
-if (['0','1','2','3'].includes(params.get('topic'))) topic = params.get('topic');
-if (['2024','2025','2026'].includes(params.get('year'))) year.value = params.get('year');
+if (topicButtons.some(button => button.dataset.filter === params.get('topic'))) topic = params.get('topic');
+if ([...year.options].some(option => option.value === params.get('year'))) year.value = params.get('year');
 search.value = params.get('q') || '';
 applyFilters();
 document.querySelectorAll('.language-link').forEach(link => link.addEventListener('click', () => {
@@ -105,6 +105,10 @@ function showPaper(paper, trigger) {
   title.id = 'dialog-paper-title';
   title.textContent = paper.querySelector('h3').textContent;
   body.append(paper.querySelector('.paper-venue').cloneNode(true), title, paper.querySelector('.paper-authors').cloneNode(true));
+  for (const selector of ['.paper-bibliographic', '.paper-status']) {
+    const element = paper.querySelector(selector);
+    if (element) body.append(element.cloneNode(true));
+  }
   const actions = paper.querySelector('.paper-actions').cloneNode(true);
   actions.querySelector('.copy-citation').addEventListener('click', event => copyCitation(paper, event.currentTarget));
   body.append(actions, paper.querySelector('.detail-content').cloneNode(true));
@@ -124,9 +128,7 @@ function toast(message) {
   toastTimer = setTimeout(() => el.classList.remove('visible'), 2600);
 }
 async function copyCitation(paper, button) {
-  const citation = `${paper.querySelector('.paper-authors').textContent} (${paper.dataset.year}). ${paper.querySelector('h3').textContent} ${paper.querySelector('.paper-venue > span').textContent}.`;
-  const url = paper.querySelector('.paper-actions > a')?.href;
-  const text = url ? `${citation} ${url}` : citation;
+  const text = paper.dataset.citation;
   try {
     await navigator.clipboard.writeText(text);
     const label = button.innerHTML;

@@ -39,7 +39,7 @@ html {
 body {
   margin:0;
   font-family:var(--sans);
-  font-size:15px;
+  font-size:17px;
   line-height:1.75;
   color:var(--ink);
   background:var(--bg);
@@ -132,7 +132,7 @@ p,h1,h2,h3,h4,figure {
   backdrop-filter:blur(20px)
 }
 .header-inner {
-  max-width:1240px;
+  max-width:1380px;
   min-height:74px;
   padding:0 38px;
   margin:auto;
@@ -160,7 +160,7 @@ p,h1,h2,h3,h4,figure {
   color:var(--accent)
 }
 .wordmark-label {
-  font-size:10px;
+  font-size:13px;
   text-transform:uppercase;
   letter-spacing:1.5px;
   color:var(--muted);
@@ -173,10 +173,10 @@ p,h1,h2,h3,h4,figure {
   gap:23px
 }
 .desktop-nav a {
-  font-size:12px;
+  font-size:15px;
   font-weight:600;
   color:var(--secondary);
-  padding:25px 0 22px;
+  padding:32px 0 22px;
   border-bottom:2px solid transparent
 }
 .desktop-nav a:hover,.desktop-nav a[aria-current] {
@@ -189,7 +189,7 @@ p,h1,h2,h3,h4,figure {
   gap:13px
 }
 .language-link {
-  font-size:12px;
+  font-size:15px;
   font-weight:650;
   white-space:nowrap
 }
@@ -252,7 +252,7 @@ p,h1,h2,h3,h4,figure {
 .profile-kicker {
   margin-top:22px;
   color:var(--accent);
-  font-size:10px;
+  font-size:13px;
   font-weight:700;
   letter-spacing:2px;
   text-transform:uppercase
@@ -272,11 +272,11 @@ p,h1,h2,h3,h4,figure {
   margin-top:4px
 }
 .profile-role {
-  font-size:14px;
+  font-size:18px;
   font-weight:600
 }
 .profile-department {
-  font-size:12px;
+  font-size:15px;
   color:var(--secondary)
 }
 .profile-topics {
@@ -288,7 +288,7 @@ p,h1,h2,h3,h4,figure {
 }
 .profile-topics span {
   color:var(--muted);
-  font-size:10px
+  font-size:13px
 }
 .profile-topics span+span::before {
   content:'·';
@@ -303,7 +303,7 @@ p,h1,h2,h3,h4,figure {
   align-items:center;
   justify-content:center;
   gap:10px;
-  font-size:12px;
+  font-size:15px;
   font-weight:600;
   background:var(--surface)
 }
@@ -340,11 +340,11 @@ p,h1,h2,h3,h4,figure {
 }
 .profile-email {
   display:inline-block;
-  font-size:11px;
+  font-size:14px;
   color:var(--secondary)
 }
 .last-updated {
-  font-size:10px;
+  font-size:13px;
   color:var(--muted);
   margin-top:18px
 }
@@ -356,11 +356,11 @@ main {
   min-width:0
 }
 main>section {
-  margin-bottom:55px;
+  margin-bottom:68px;
   scroll-margin-top:24px
 }
 .eyebrow {
-  font-size:10px;
+  font-size:13px;
   letter-spacing:1.9px;
   font-weight:700;
   color:var(--accent)
@@ -368,7 +368,7 @@ main>section {
 .about-section h2 {
   margin:14px 0 24px;
   font-family:var(--serif);
-  font-size:clamp(27px,2.5vw,35px);
+  font-size:clamp(34px,3vw,44px);
   font-weight:400;
   letter-spacing:-1px;
   line-height:1.32
@@ -377,7 +377,7 @@ main>section {
   color:var(--accent)
 }
 .biography {
-  font-size:14px;
+  font-size:18px;
   line-height:1.95;
   color:var(--secondary)
 }
@@ -392,7 +392,7 @@ main>section {
   border-left:2px solid var(--accent);
   background:var(--surface);
   color:var(--secondary);
-  font-size:12px;
+  font-size:15px;
   line-height:1.95;
   border-radius:0 8px 8px 0
 }
@@ -409,7 +409,7 @@ main>section {
   margin-bottom:22px
 }
 .section-heading h2 {
-  font-size:23px;
+  font-size:28px;
   color:var(--accent);
   line-height:1.3;
   letter-spacing:-.4px;
@@ -418,7 +418,7 @@ main>section {
   gap:13px
 }
 .section-number {
-  font-size:10px;
+  font-size:13px;
   font-weight:500;
   font-family:Consolas,monospace;
   color:var(--muted);
@@ -428,7 +428,7 @@ main>section {
   border:1px solid var(--line);
   border-radius:30px;
   padding:1px 10px;
-  font-size:11px;
+  font-size:14px;
   color:var(--muted)
 }
 .news-list {
@@ -438,10 +438,10 @@ main>section {
 }
 .news-list li {
   display:grid;
-  grid-template-columns:68px 1fr;
+  grid-template-columns:80px 1fr;
   gap:15px;
   padding:12px 0;
-  font-size:12px;
+  font-size:15px;
   line-height:1.8
 }
 .news-list li+li {
@@ -449,7 +449,7 @@ main>section {
 }
 .news-list time {
   font-family:Consolas,monospace;
-  font-size:11px;
+  font-size:14px;
   color:var(--accent);
   padding-top:1px
 }
@@ -483,24 +483,24 @@ main>section {
 .research-index {
   font-family:var(--serif);
   font-style:italic;
-  font-size:22px;
+  font-size:26px;
   color:var(--muted);
   line-height:1.4
 }
 .research-item h3 {
   color:var(--ink);
-  font-size:13px;
+  font-size:16px;
   font-weight:650;
   line-height:1.6
 }
 .research-item p {
   margin:7px 0 10px;
-  font-size:11px;
+  font-size:14px;
   line-height:1.9;
   color:var(--secondary)
 }
 .research-link {
-  font-size:10px;
+  font-size:13px;
   font-weight:600;
   display:inline-flex;
   align-items:center;
@@ -544,7 +544,7 @@ main>section {
   background:none;
   border:0;
   color:var(--ink);
-  font-size:11px;
+  font-size:14px;
   outline-offset:0
 }
 input::placeholder {
@@ -561,7 +561,7 @@ input::placeholder {
   border-radius:8px;
   background:var(--bg);
   color:var(--secondary);
-  font-size:11px
+  font-size:14px
 }
 .topic-filters {
   display:flex;
@@ -576,7 +576,7 @@ input::placeholder {
   border-radius:5px;
   color:var(--secondary);
   background:var(--bg);
-  font-size:10px;
+  font-size:13px;
   line-height:1.7
 }
 .topic-filters button[aria-pressed=true] {
@@ -595,7 +595,7 @@ input::placeholder {
   justify-content:space-between;
   align-items:center;
   min-height:22px;
-  font-size:10px;
+  font-size:13px;
   color:var(--muted)
 }
 .results-row button {
@@ -603,18 +603,18 @@ input::placeholder {
   border:0;
   padding:0;
   color:var(--accent);
-  font-size:10px
+  font-size:13px
 }
 .publication-note {
-  font-size:10px;
+  font-size:13px;
   color:var(--muted);
   margin:7px 0 10px
 }
 .paper {
   display:grid;
-  grid-template-columns:178px minmax(0,1fr);
-  gap:21px;
-  padding:25px 0;
+  grid-template-columns:210px minmax(0,1fr);
+  gap:28px;
+  padding:32px 0;
   border-bottom:1px dashed var(--line);
   align-items:center
 }
@@ -630,7 +630,7 @@ input::placeholder {
 .paper-thumbnail img {
   display:block;
   width:100%;
-  height:125px;
+  height:155px;
   object-fit:contain;
   padding:8px;
   transition:transform .25s ease
@@ -639,7 +639,7 @@ input::placeholder {
   transform:scale(1.025)
 }
 .paper-thumbnail>span {
-  font-size:9px;
+  font-size:12px;
   color:#595e94;
   background:#f6f6fa;
   display:flex;
@@ -673,12 +673,12 @@ input::placeholder {
 }
 .paper-typography strong {
   color:var(--secondary);
-  font-size:11px;
+  font-size:14px;
   font-weight:500;
   line-height:1.6
 }
 .paper-typography i {
-  font-size:9px;
+  font-size:12px;
   letter-spacing:1px;
   color:var(--muted);
   font-style:normal
@@ -688,7 +688,7 @@ input::placeholder {
   flex-wrap:wrap;
   align-items:center;
   gap:5px 8px;
-  font-size:9px;
+  font-size:12px;
   line-height:1.5
 }
 .paper-venue>span {
@@ -704,13 +704,13 @@ input::placeholder {
 }
 .paper h3 {
   margin-top:8px;
-  font-size:14px;
+  font-size:18px;
   font-weight:650;
   line-height:1.55;
   letter-spacing:-.15px
 }
 .paper-authors {
-  font-size:11px;
+  font-size:14px;
   line-height:1.8;
   color:var(--secondary);
   margin-top:8px
@@ -724,7 +724,7 @@ input::placeholder {
 .paper-topic {
   margin:8px 0;
   color:var(--muted);
-  font-size:9px
+  font-size:12px
 }
 .paper-actions {
   display:flex;
@@ -736,7 +736,7 @@ input::placeholder {
   display:inline-flex;
   align-items:center;
   gap:5px;
-  font-size:10px;
+  font-size:13px;
   padding:4px 0;
   color:var(--accent);
   border:0;
@@ -754,7 +754,7 @@ input::placeholder {
 }
 .paper-details summary {
   color:var(--accent);
-  font-size:10px;
+  font-size:13px;
   cursor:pointer;
   width:fit-content
 }
@@ -765,13 +765,13 @@ input::placeholder {
 }
 .detail-content {
   margin-top:18px;
-  font-size:13px;
+  font-size:16px;
   color:var(--secondary);
   line-height:1.9
 }
 .detail-content h4 {
   color:var(--accent);
-  font-size:12px;
+  font-size:15px;
   text-transform:uppercase;
   letter-spacing:.5px;
   margin-bottom:9px
@@ -789,14 +789,14 @@ input::placeholder {
   object-fit:contain
 }
 .detail-content figcaption {
-  font-size:11px;
+  font-size:14px;
   margin-top:10px;
   color:var(--muted)
 }
 #empty-results {
   padding:40px 15px;
   text-align:center;
-  font-size:13px;
+  font-size:16px;
   border:1px dashed var(--line);
   border-radius:8px;
   color:var(--secondary)
@@ -806,7 +806,7 @@ input::placeholder {
   margin-bottom:28px
 }
 .exp-heading {
-  font-size:11px;
+  font-size:14px;
   text-transform:uppercase;
   letter-spacing:1px;
   font-weight:650;
@@ -837,25 +837,25 @@ input::placeholder {
   padding-bottom:4px
 }
 .exp-date {
-  font-size:10px;
+  font-size:13px;
   color:var(--accent);
   font-family:Consolas,var(--sans);
   margin-bottom:3px
 }
 .exp-title {
-  font-size:14px;
+  font-size:18px;
   font-weight:650;
   line-height:1.6
 }
 .exp-subtitle {
-  font-size:12px;
+  font-size:15px;
   color:var(--secondary);
   margin-top:3px
 }
 .exp-details {
   margin:9px 0 0;
   padding-left:16px;
-  font-size:11px;
+  font-size:14px;
   line-height:1.9;
   color:var(--secondary)
 }
@@ -886,13 +886,13 @@ input::placeholder {
   height:24px
 }
 .honor-date {
-  font-size:10px;
+  font-size:13px;
   color:var(--accent);
   letter-spacing:.4px;
   margin-bottom:8px
 }
 .featured-honor h3 {
-  font-size:16px;
+  font-size:19px;
   line-height:1.65;
   font-weight:600
 }
@@ -901,7 +901,7 @@ input::placeholder {
 }
 .honor-organization {
   margin-top:10px;
-  font-size:11px;
+  font-size:14px;
   color:var(--secondary)
 }
 .featured-honor a {
@@ -909,7 +909,7 @@ input::placeholder {
   align-items:center;
   gap:6px;
   margin-top:9px;
-  font-size:10px
+  font-size:13px
 }
 .featured-honor a svg {
   width:11px;
@@ -920,7 +920,7 @@ input::placeholder {
   gap:24px
 }
 .honor-group h3 {
-  font-size:12px;
+  font-size:15px;
   color:var(--accent);
   margin-bottom:12px
 }
@@ -933,7 +933,7 @@ input::placeholder {
   position:relative;
   padding:8px 0 8px 17px;
   border-bottom:1px dashed var(--line);
-  font-size:12px;
+  font-size:15px;
   line-height:1.8;
   color:var(--secondary)
 }
@@ -949,7 +949,7 @@ input::placeholder {
 }
 .honor-note {
   color:var(--muted);
-  font-size:11px
+  font-size:14px
 }
 .contact-section {
   padding:29px 0;
@@ -958,7 +958,7 @@ input::placeholder {
 .contact-section h2 {
   font-family:var(--serif);
   font-weight:400;
-  font-size:22px;
+  font-size:26px;
   line-height:1.6;
   margin:10px 0 18px;
   max-width:480px
@@ -967,12 +967,12 @@ input::placeholder {
   display:inline-flex;
   align-items:center;
   gap:14px;
-  font-size:13px
+  font-size:16px
 }
 footer {
   border-top:1px solid var(--line);
   color:var(--muted);
-  font-size:10px
+  font-size:13px
 }
 footer>div {
   max-width:1192px;
@@ -1026,24 +1026,24 @@ dialog::backdrop {
   z-index:1
 }
 .dialog-top>span {
-  font-size:11px;
+  font-size:14px;
   text-transform:uppercase;
   letter-spacing:1px;
   color:var(--accent)
 }
 .dialog-top h2 {
-  font-size:16px
+  font-size:19px
 }
 .dialog-body {
   padding:26px 32px 35px
 }
 .dialog-body h2 {
-  font-size:23px;
+  font-size:28px;
   line-height:1.6;
   margin:14px 0
 }
 .dialog-body .paper-authors {
-  font-size:13px
+  font-size:16px
 }
 .dialog-body .paper-actions {
   margin-top:12px
@@ -1052,14 +1052,14 @@ dialog::backdrop {
   margin-top:30px
 }
 .dialog-body .paper-venue {
-  font-size:11px
+  font-size:14px
 }
 .citation-fallback {
   width:100%;
   min-height:140px;
   margin-top:14px;
   padding:12px;
-  font-size:12px;
+  font-size:15px;
   background:var(--surface);
   color:var(--ink);
   border:1px solid var(--line);
@@ -1079,7 +1079,7 @@ dialog::backdrop {
 }
 .wechat-body p {
   margin:12px 0 0;
-  font-size:12px;
+  font-size:15px;
   color:var(--secondary)
 }
 #toast {
@@ -1094,7 +1094,7 @@ dialog::backdrop {
   background:var(--bg);
   color:var(--accent);
   box-shadow:var(--shadow);
-  font-size:12px;
+  font-size:15px;
   pointer-events:none;
   opacity:0;
   transition:opacity .15s
@@ -1104,7 +1104,7 @@ dialog::backdrop {
 }
 html[lang=zh-CN] .about-section h2 {
   font-family:var(--sans);
-  font-size:32px;
+  font-size:38px;
   font-weight:500;
   letter-spacing:1px;
   line-height:1.6
@@ -1120,19 +1120,49 @@ html[lang=zh-CN] .profile h1 span {
 }
 html[lang=zh-CN] .contact-section h2 {
   font-family:var(--sans);
-  font-size:19px
+  font-size:22px
+}
+/* Publication metadata and a quieter exploratory direction. */
+.paper-bibliographic {
+  margin-top:5px;
+  font-size:13px;
+  color:var(--muted);
+  font-variant-numeric:tabular-nums
+}
+.paper-status {
+  margin-top:7px;
+  font-size:13px;
+  color:var(--accent)
+}
+.exp-advisor {
+  font-size:15px;
+  color:var(--secondary);
+  margin:5px 0
+}
+.research-item:last-child {
+  grid-column:1 / -1;
+  padding-top:7px
+}
+.research-item:last-child h3 {
+  color:var(--secondary)
+}
+.paper-thumbnail {
+  box-shadow:0 3px 12px #32355a07
+}
+.paper h3 {
+  text-wrap:pretty
 }
 @media(min-width:1450px) {
   .page-layout {
-    max-width:1260px;
+    max-width:1380px;
     gap:86px;
     grid-template-columns:280px minmax(0,1fr)
   }
   .paper {
-    grid-template-columns:195px minmax(0,1fr)
+    grid-template-columns:220px minmax(0,1fr)
   }
   .paper-thumbnail img {
-    height:138px
+    height:165px
   }
 }
 @media(min-width:901px) and (max-height:850px) {
@@ -1153,14 +1183,14 @@ html[lang=zh-CN] .contact-section h2 {
     padding-inline:30px
   }
   .paper {
-    grid-template-columns:145px minmax(0,1fr);
+    grid-template-columns:170px minmax(0,1fr);
     gap:17px
   }
   .paper-thumbnail img {
-    height:110px
+    height:130px
   }
   .paper h3 {
-    font-size:13px
+    font-size:16px
   }
 }
 @media(max-width:900px) {
@@ -1223,7 +1253,7 @@ html[lang=zh-CN] .contact-section h2 {
     height:136px
   }
   .paper h3 {
-    font-size:14px
+    font-size:18px
   }
   main>section {
     margin-bottom:45px
@@ -1233,6 +1263,7 @@ html[lang=zh-CN] .contact-section h2 {
   }
 }
 @media(max-width:560px) {
+  .research-grid { grid-template-columns:1fr; }
   html {
     scroll-padding-top:82px
   }
@@ -1240,7 +1271,7 @@ html[lang=zh-CN] .contact-section h2 {
     padding-inline:20px
   }
   .wordmark-label {
-    font-size:9px;
+    font-size:12px;
     letter-spacing:1px
   }
   .header-actions {
@@ -1267,46 +1298,46 @@ html[lang=zh-CN] .contact-section h2 {
   }
   .profile h1 span {
     display:inline;
-    font-size:15px;
+    font-size:17px;
     margin-left:12px
   }
   .profile-kicker {
-    font-size:9px
+    font-size:12px
   }
   .profile-topics {
     margin:11px 0 16px
   }
   .profile-email {
-    font-size:11px
+    font-size:14px
   }
   .last-updated {
     margin-top:12px
   }
   .about-section h2,html[lang=zh-CN] .about-section h2 {
-    font-size:27px;
+    font-size:31px;
     letter-spacing:-.4px
   }
   .eyebrow {
-    font-size:9px;
+    font-size:12px;
     letter-spacing:1.2px
   }
   .biography {
-    font-size:13px
+    font-size:16px
   }
   .affiliation {
-    font-size:11px;
+    font-size:14px;
     padding:12px 15px
   }
   .section-heading h2 {
-    font-size:21px
+    font-size:25px
   }
   .section-heading {
     margin-bottom:17px
   }
   .news-list li {
-    grid-template-columns:57px 1fr;
+    grid-template-columns:70px 1fr;
     gap:10px;
-    font-size:11px
+    font-size:14px
   }
   .news-list .news-featured {
     margin-inline:-10px;
@@ -1319,16 +1350,16 @@ html[lang=zh-CN] .contact-section h2 {
     gap:8px
   }
   .research-index {
-    font-size:18px
+    font-size:21px
   }
   .research-item h3 {
-    font-size:12px
+    font-size:15px
   }
   .research-item p {
-    font-size:10px
+    font-size:13px
   }
   .research-link {
-    font-size:9px
+    font-size:12px
   }
   .paper {
     grid-template-columns:1fr;
@@ -1347,23 +1378,23 @@ html[lang=zh-CN] .contact-section h2 {
     display:none
   }
   .paper h3 {
-    font-size:14px
+    font-size:18px
   }
   .paper-authors {
-    font-size:11px
+    font-size:14px
   }
   .paper-venue,.paper-topic {
-    font-size:10px
+    font-size:13px
   }
   .paper-actions>a,.paper-actions>button,.paper-details summary {
-    font-size:11px;
+    font-size:14px;
     min-height:34px
   }
   .topic-filters {
     gap:6px
   }
   .topic-filters button {
-    font-size:10px;
+    font-size:13px;
     min-height:33px;
     padding-inline:8px
   }
@@ -1374,11 +1405,11 @@ html[lang=zh-CN] .contact-section h2 {
     padding-inline:10px
   }
   .search-field input {
-    font-size:10px
+    font-size:13px
   }
   .year-field select {
     width:100px;
-    font-size:10px;
+    font-size:13px;
     padding-right:8px
   }
   .search-field svg {
@@ -1388,7 +1419,7 @@ html[lang=zh-CN] .contact-section h2 {
     line-height:1.8
   }
   .exp-title {
-    font-size:13px
+    font-size:16px
   }
   .featured-honor {
     padding:18px 16px;
@@ -1404,13 +1435,13 @@ html[lang=zh-CN] .contact-section h2 {
     height:20px
   }
   .featured-honor h3 {
-    font-size:14px
+    font-size:18px
   }
   .honor-group li {
-    font-size:11px
+    font-size:14px
   }
   .contact-section h2 {
-    font-size:21px
+    font-size:25px
   }
   footer>div {
     display:block;
@@ -1431,10 +1462,10 @@ html[lang=zh-CN] .contact-section h2 {
     padding:20px
   }
   .dialog-body h2 {
-    font-size:18px
+    font-size:21px
   }
   .dialog-body .detail-content {
-    font-size:12px
+    font-size:15px
   }
   .back-to-top {
     right:14px;
