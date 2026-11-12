@@ -118,7 +118,7 @@ def paper(p, u, topics):
     return f'''<article class="paper" id="paper-{p['id']}" data-topic="{p['topic']}" data-year="{p['year']}" data-citation="{escape(citation)}">
       {thumbnail}<div class="paper-content">
         <div class="paper-venue"><span>{escape(p['journal'])}</span><time>{p['year']}</time></div>
-        <h3>{escape(p['title'])}</h3>
+        <h3><a href="{escape(p['url'])}" target="_blank" rel="noopener">{escape(p['title'])}</a></h3>
         <p class="paper-authors">{authors}</p>
         {bibliographic}{status}
         <p class="paper-topic">{escape(topics[p['topic']])}</p>

@@ -24,6 +24,16 @@ document.addEventListener('click', e => { if (!e.target.closest('.site-header'))
 document.addEventListener('keydown', e => { if (e.key === 'Escape' && !menu.hidden) { closeMenu(); menuToggle.focus(); } });
 matchMedia('(min-width:901px)').addEventListener('change', e => { if (e.matches) closeMenu(); });
 
+// Keep a tall desktop profile readable while scrolling long publication lists.
+const profile = document.querySelector('.profile');
+function positionProfile() {
+  const top = Math.min(document.querySelector('.site-header').offsetHeight + 28, innerHeight - profile.offsetHeight - 24);
+  profile.style.setProperty('--profile-top', `${top}px`);
+}
+new ResizeObserver(positionProfile).observe(profile);
+window.addEventListener('resize', positionProfile);
+positionProfile();
+
 // Both editions use identical paper IDs, topic IDs and filter semantics.
 const papers = [...document.querySelectorAll('.paper')];
 const search = document.querySelector('#publication-search');
