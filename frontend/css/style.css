@@ -1139,10 +1139,6 @@ html[lang=zh-CN] .contact-section h2 {
   color:var(--secondary);
   margin:5px 0
 }
-.research-item:last-child {
-  grid-column:1 / -1;
-  padding-top:7px
-}
 .research-item:last-child h3 {
   color:var(--secondary)
 }

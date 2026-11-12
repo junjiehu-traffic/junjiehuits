@@ -35,8 +35,8 @@ UI = {
         'news_honor': 'Selected for the CAST Young Science and Technology Talent Cultivation Program — Special Program for Doctoral Students.',
         'news_phd': 'Began Ph.D. studies in the <strong>Department of Civil Engineering, Tsinghua University</strong>, advised by Prof. Ruimin Li.',
         'news_grad': 'Named an <strong>Outstanding Graduate of Hunan Province</strong>.',
-        'topics_short': ['Traffic modeling', 'Safety & driving behavior', 'Other explorations'],
-        'topic_desc': ['Reconstructing and predicting traffic states from sparse observations, with an emphasis on spatiotemporal structure and efficient imputation.', 'Understanding crash risk, injury severity and driving heterogeneity through statistical models, trajectory networks and physics-informed learning.', 'Exploratory work on urban road-network structure, dynamic regionalization and public electric-vehicle charging.'],
+        'topics_short': ['Traffic modeling', 'Traffic safety', 'Driving behavior', 'Other explorations'],
+        'topic_desc': ['Modeling spatiotemporal structure in traffic flow and crash events, including state reconstruction, data imputation, regional risk prediction and dynamic crash associations.', 'Assessing traffic conflicts and crash severity through safety indicators, heterogeneous statistical models and structured data augmentation.', 'Understanding car-following dynamics, driving styles and trajectory patterns through complex networks, residual analysis and physics-informed learning.', 'Exploratory work on urban road-network structure, dynamic regionalization and public electric-vehicle charging.'],
         'contact': 'Let’s connect', 'contact_text': 'For academic discussions and research exchanges, please get in touch.',
         'footer': 'Transportation research · Tsinghua University', 'inspired': 'Design inspiration',
     },
@@ -63,8 +63,8 @@ UI = {
         'news_honor': '入选中国科协青年科技人才培育工程博士生专项计划。',
         'news_phd': '进入<strong>清华大学土木工程系</strong>攻读博士学位，师从李瑞敏教授。',
         'news_grad': '获评<strong>湖南省优秀毕业生</strong>。',
-        'topics_short': ['交通时空数据建模', '交通安全与驾驶行为', '其他研究尝试'],
-        'topic_desc': ['面向稀疏观测，利用时空结构开展交通状态重构、预测与高效缺失数据插补。', '结合统计建模、轨迹网络与物理信息融合学习，研究事故风险、伤害严重程度及驾驶行为异质性。', '探索城市道路网络结构、动态区域划分与公共电动汽车充电等相关问题。'],
+        'topics_short': ['交通时空数据建模', '交通安全', '驾驶行为', '其他研究尝试'],
+        'topic_desc': ['面向交通流与事故事件的时空结构，研究状态重构、缺失数据插补、区域风险预测及事故动态关联。', '围绕交通冲突与事故严重程度，开展安全指标分析、异质性统计建模及结构化数据增强。', '结合复杂网络、残差分析与物理信息融合学习，研究跟驰动力学、驾驶风格及轨迹行为表征。', '探索城市道路网络结构、动态区域划分与公共电动汽车充电等相关问题。'],
         'contact': '学术交流', 'contact_text': '欢迎就交通数据、交通安全与驾驶行为等方向交流研究。',
         'footer': '交通运输研究 · 清华大学', 'inspired': '设计参考',
     }
@@ -171,7 +171,7 @@ def build(lang):
   <aside class="profile" aria-label="{u['profile_label']}">
     <div class="portrait-frame"><img class="portrait" src="profile-anime.png" alt="{'Anime portrait of Junjie Hu in graduation attire' if lang == 'en' else '胡俊杰身着学位服的动漫风格肖像'}" width="1122" height="1402" fetchpriority="high"></div>
     <div class="profile-info"><p class="profile-kicker">{u['university']}</p><h1>{u['name']}<span>{u['other']}</span></h1><p class="profile-role">{u['role']}</p><p class="profile-department">{u['department']}</p>
-    <div class="profile-topics"><span>{u['topics_short'][0]}</span><span>{u['topics_short'][1]}</span></div>
+    <div class="profile-topics"><span>{u['topics_short'][0]}</span><span>{u['topics_short'][1]}</span><span>{u['topics_short'][2]}</span></div>
     <a class="cv-link" href="JunjieHu_CV.pdf" target="_blank" rel="noopener">{icon('file')}{u['cv']}{icon('link')}</a>
     <div class="social-links"><a href="mailto:junjiehuits@gmail.com" aria-label="{u['email']}" title="{u['email']}">{icon('mail')}</a><a href="https://scholar.google.com/citations?hl={'en' if lang == 'en' else 'zh-CN'}&amp;user=2Irk2E4AAAAJ" target="_blank" rel="noopener" aria-label="{u['scholar']}" title="{u['scholar']}">{icon('scholar')}</a><a href="https://github.com/junjiehu-traffic" target="_blank" rel="noopener" aria-label="GitHub" title="GitHub">{icon('github')}</a><a href="wechat.jpg" class="wechat-link" aria-label="{u['wechat']}" title="{u['wechat']}">{icon('chat')}</a></div>
     <a class="profile-email" href="mailto:junjiehuits@gmail.com">junjiehuits@gmail.com</a><p class="last-updated">{u['updated']}<time datetime="{DATA['updated']}">{u['date']}</time></p></div>
